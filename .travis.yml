@@ -9,6 +9,11 @@ before install:
   - echo $TRAVIS_BRANCH
   - echo $TRAVIS_BUILD_NUMBER
 
+deploy:
+  deploy: heroku
+  api_key:
+    secure: ef7e4ee0-9994-48c2-af2f-b8bb4971b626
+
 addons:
   sonarcloud:
     organization: "singham8659-github" # the key of the org you chose at step #3
