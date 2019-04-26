@@ -12,13 +12,13 @@ before install:
 deploy:
   deploy: heroku
   api_key:
-    secure: ef7e4ee0-9994-48c2-af2f-b8bb4971b626
+    secure: $HEROKU_API_KEY
 
 addons:
   sonarcloud:
     organization: "singham8659-github" # the key of the org you chose at step #3
     token:
-      secure: $HEROKU_API_KEY # encrypted value of your token
+      secure: $SONAR_TOKEN # encrypted value of your token
 script:
   # other script steps might be done before running the actual analysis
   - sonar-scanner
