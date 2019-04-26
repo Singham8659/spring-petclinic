@@ -8,4 +8,12 @@ before install:
   - echo $TRAVIS_TAG
   - echo $TRAVIS_BRANCH
   - echo $TRAVIS_BUILD_NUMBER
-#issou
+
+addons:
+  sonarcloud:
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    token:
+      secure: 2d58cc550e564c2ac2c2e653bbe101e5deb2a81a # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
