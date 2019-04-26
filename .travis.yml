@@ -11,7 +11,7 @@ before install:
 
 addons:
   sonarcloud:
-    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    organization: "singham8659-github" # the key of the org you chose at step #3
     token:
       secure: 2d58cc550e564c2ac2c2e653bbe101e5deb2a81a # encrypted value of your token
 script:
